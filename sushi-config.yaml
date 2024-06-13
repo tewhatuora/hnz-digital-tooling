@@ -8,11 +8,11 @@ canonical: https://fhir-ig-uat.digital.health.nz/hnz-digital-tooling
 name: Health New Zealand Te Whatu Ora Digital Tooling Implementation Guide
 title: Health New Zealand Te Whatu Ora Digital Tooling Implementation Guide
 description: FHIR profiles used in FHIR Publishing processes within Health New Zealand Te Whatu Ora
-status: draft
-version: 0.0.1
+status: release
+version: 0.0.2
 fhirVersion: 4.0.1
 copyrightYear: 2024+
-releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#NZ "New Zealand"
 # publisher:
