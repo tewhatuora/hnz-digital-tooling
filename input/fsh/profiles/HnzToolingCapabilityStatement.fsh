@@ -24,7 +24,7 @@ Description: "A CapabilityStatement profile that constrains and documents the Ca
 * rest.resource 1..*
 * rest.resource.type ^short = "The type of resource that the server supports. This MUST be provided to generate OpenAPI paths"
 
-* rest.resource.profile ^short = "The based profile that the resource supports. If not provided, the base resource schema will be used"
+* rest.resource.profile ^short = "The base profile that the resource supports. If not provided, the base resource schema from the FHIR specification will be used"
 * rest.resource.supportedProfile ^short = "The profiles that the resource supports. This MUST be provided to generate OpenAPI schemas based on the FHIR profiles, and examples on each resource"
 * rest.resource.interaction ^short = "The interactions that the resource supports. This MUST be provided to generate OpenAPI operations"
 * rest.resource.searchParam ^short = "The search parameters that the resource supports. This MUST be provided to generate OpenAPI parameters on each resource"
