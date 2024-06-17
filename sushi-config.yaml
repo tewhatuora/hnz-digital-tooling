@@ -9,7 +9,7 @@ name: Health New Zealand Te Whatu Ora Digital Tooling Implementation Guide
 title: Health New Zealand Te Whatu Ora Digital Tooling Implementation Guide
 description: FHIR profiles used in FHIR Publishing processes within Health New Zealand Te Whatu Ora
 status: active
-version: 0.0.5
+version: 0.0.6
 fhirVersion: 4.0.1
 copyrightYear: 2024+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use

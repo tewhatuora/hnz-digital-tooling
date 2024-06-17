@@ -14,6 +14,9 @@ Description: "A CapabilityStatement profile that constrains and documents the Ca
 * version 1..1
 * version ^short = "The version of API, displayed in the OpenAPI contact section"
 
+* format 1..1
+* format ^short = "The media types supported by the API, e.g. application/json or application/fhir+json"
+
 * extension contains HnzApiSpecBuilderExtension named HnzApiSpecBuilderExtension 1..1
 
 * rest.mode ^short = "The mode of the RESTful interface. A mode of server MUST be provided to generate an OpenAPI spec"
