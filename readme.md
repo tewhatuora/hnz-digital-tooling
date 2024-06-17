@@ -6,7 +6,7 @@
   <p align="center">
     This GitHub project is the repository for the Health NZ | Te Whatu Ora HL7 FHIR Digital Tooling Implementation Guide conformance artifacts.
     <br />
-    <a href="https:/fhir-ig-uat.digital.health.nz/hnz-digital-tooling">View Implementation Guide</a>
+    <a href="https://fhir-ig-uat.digital.health.nz/hnz-digital-tooling">View Implementation Guide</a>
   </p>
 </div>
 
