@@ -18,7 +18,7 @@ Instance: ExampleCapabilityStatement
 InstanceOf: HnzToolingCapabilityStatement
 Usage: #definition
 
-...
+(details)
 ```
 
 For a full example, view the [ExampleCapabilityStatement fsh file](https://github.com/tewhatuora/hnz-digital-tooling/blob/master/input/fsh/profiles/ExampleCapabilityStatement.fsh).

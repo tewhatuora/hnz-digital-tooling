@@ -76,6 +76,7 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  History: history.html
   Artifacts: artifacts.html
   Support:
     FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
