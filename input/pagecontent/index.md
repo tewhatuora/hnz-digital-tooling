@@ -6,8 +6,5 @@ To use these profiles, a dependency should be added to the source Implementation
 
 ```yaml
 dependencies:
-  tewhatuora.digitaltooling.ig:
-    id: tewhatuora.digitaltooling.ig
-    uri: https://implementation-guides-uat.digital.health.nz/hnz-digital-tooling/package.tgz
-    version: 0.0.1
+  tewhatuora.digitaltooling.ig: 0.0.5
 ```
