@@ -76,6 +76,7 @@ parameters:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  OpenAPI Generator: OpenAPI-Generator.html
   History: history.html
   Artifacts: artifacts.html
   Support:

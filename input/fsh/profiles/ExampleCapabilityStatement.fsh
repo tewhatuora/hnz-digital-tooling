@@ -1,5 +1,6 @@
 Instance: ExampleCapabilityStatement
 InstanceOf: HnzToolingCapabilityStatement
+Title: "Example Capability Statement"
 Usage: #definition
 
 * status =  #draft
