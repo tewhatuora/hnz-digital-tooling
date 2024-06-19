@@ -1,8 +1,8 @@
 Profile: HnzToolingCapabilityStatement
 Parent: CapabilityStatement
 Id: hnz-capability-statement
-Title: "Capability Statement profile for use with the Health New Zealand Te Whatu Ora OpenAPI spec generator"
-Description: "A CapabilityStatement profile that constrains and documents the Capability Statement to the Health New Zealand Te Whatu Ora OpenAPI spec generator requirements"
+Title: "Capability Statement profile for use with the Health New Zealand Te Whatu Ora OpenAPI spec converter"
+Description: "A CapabilityStatement profile that constrains and documents the Capability Statement to the Health New Zealand Te Whatu Ora OpenAPI spec converter requirements"
 
 * contact 1..1
 * contact.name 1..1

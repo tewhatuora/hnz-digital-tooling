@@ -1,8 +1,8 @@
-The OpenAPI Generator tool is a project developed by Te Whatu Ora Health New Zealand, which can generate an Implementation Guide package into a OpenAPI specification, for use by developers consuming FHIR APIs as well as programmatic validation tools such as API Gateways.
+The OpenAPI Converter tool is a project developed by Te Whatu Ora Health New Zealand, which can generate an Implementation Guide package into a OpenAPI specification, for use by developers consuming FHIR APIs as well as programmatic validation tools such as API Gateways. The source code for the tool is available on [GitHub](https://github.com/tewhatuora/fhir-openapi-converter).
 
 ## Tool Onboarding
 
-To use the OpenAPI Generator tool, a `CapabilityStatement` that is an `InstanceOf` the `HnzToolingCapabilityStatement` [profile](./StructureDefinition-hnz-capability-statement.html) resource must be created within an IG package.
+To use the OpenAPI Converter tool, a `CapabilityStatement` that is an `InstanceOf` the `HnzToolingCapabilityStatement` [profile](./StructureDefinition-hnz-capability-statement.html) resource must be created within an IG package.
 
 Example fsh:
 
@@ -18,7 +18,7 @@ For a full example, view the [ExampleCapabilityStatement fsh source file](https:
 
 ## Tool features
 
-The OpenAPI Generator tool takes an input of a FHIR Implementation Guide package and uses the profiled `CapabilityStatement` resource to form an OpenAPI v3 specification.
+The OpenAPI Converter tool takes an input of a FHIR Implementation Guide package and uses the profiled `CapabilityStatement` resource to form an OpenAPI v3 specification.
 
 Implementers using this tool must annotate their API using the `CapabilityStatement` resources effectively to best benefit from the tool.
 
