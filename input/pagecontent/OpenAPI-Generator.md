@@ -1,4 +1,4 @@
-The OpenAPI Generator tool is a project developed by Te Whatu Ora Health New Zealand, which can convert an Implementation Guide package into a OpenAPI specification, for use by developers consuming FHIR APIs as well as programmatic validation tools such as API Gateways.
+The OpenAPI Generator tool is a project developed by Te Whatu Ora Health New Zealand, which can generate an Implementation Guide package into a OpenAPI specification, for use by developers consuming FHIR APIs as well as programmatic validation tools such as API Gateways.
 
 ## Tool Onboarding
 
@@ -94,7 +94,39 @@ Where an OpenAPI schema is created from a `StructureDefinition` resource in the 
 - Adds `minItems` for array items where the `StructureDefinition.mix` cardinality is defined
 
 ### FHIR Custom Operations
+Where custom operations are annotated for the system or type, an OpenAPI path is created for the custom operation. Where the operation mode is `query`, a `GET /${operation}` endpoint will be created. Where the operation mode is `operation`, a `POST /${operation}` endpoint is created. The parameters defined in the custom operation will be annotated in the OpenAPI spec as either query parameters if it is a GET resource, or a FHIR `Parameters` resource in a requestBody for a POST resource.
 
+Case 1: Define a system level operation
+```
+* rest.operation[+].name = "summary"
+* rest.operation[=].definition = Canonical(ExampleSystemOperationDefinition)
+```
+
+Case 2: Define a type level operation
+
+```
+// Patient resource
+* rest.resource[+].type = #Patient
+* rest.resource[=].operation[+].name = "summary"
+* rest.resource[=].operation[=].definition = Canonical(ExampleQueryOperationDefinition)
+* rest.resource[=].operation[+].name = "match"
+* rest.resource[=].operation[=].definition = Canonical(ExampleOperationModeOperationDefinition)
+
+```
+
+### Custom headers
+Where an API requires HTTP headers to be provided, these can be annotated using an extension on the `HnzToolingCapabilityStatement` resource. These are added to all API operations.
+
+Example fsh:
+
+```
+* extension[HnzApiSpecBuilderExtension].extension[globalHeaders].extension[+].url = Canonical(HnzCustomHeadersExtension)
+* extension[HnzApiSpecBuilderExtension].extension[globalHeaders].extension[=].extension[key].valueString = "Correlation-Id"
+* extension[HnzApiSpecBuilderExtension].extension[globalHeaders].extension[=].extension[value].valueUri = "https://raw.githubusercontent.com/tewhatuora/schemas/main/fhir-definitions-oas/uuid-definition.json"
+* extension[HnzApiSpecBuilderExtension].extension[globalHeaders].extension[=].extension[required].valueBoolean = true
+```
+
+For each header, a key `valueString` is provided for the header name, and a `valueUri` is provided for the header value. This must be a resolveable uri to an OpenAPI schema defining the value. The required `valueBoolean` defines whether or not this is listed as a required or optional header.
 
 ### OpenAPI Examples
 Where a schema is created using a `StructureDefinition` resource, if there are examples contained within the IG using this profile, the examples be added as OpenAPI examples to the OpenAPI specification.
