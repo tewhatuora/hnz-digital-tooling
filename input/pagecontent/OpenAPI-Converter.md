@@ -1,10 +1,23 @@
 The OpenAPI Converter tool is a project developed by Te Whatu Ora Health New Zealand, which can generate an Implementation Guide package into a OpenAPI specification, for use by developers consuming FHIR APIs as well as programmatic validation tools such as API Gateways. The source code for the tool is available on [GitHub](https://github.com/tewhatuora/fhir-openapi-converter).
 
+
+<img src="./flow.png" alt="Flow" style="width: 100%;">
+<br/>
+
 ## Tool Onboarding
 
 To use the OpenAPI Converter tool, a `CapabilityStatement` that is an `InstanceOf` the `HnzToolingCapabilityStatement` [profile](./StructureDefinition-hnz-capability-statement.html) resource must be created within an IG package.
 
-Example fsh:
+### Example
+
+**Add SUSHI dependency on the Digital Tooling package:**
+
+```yaml
+dependencies:
+  tewhatuora.digitaltooling.ig: 0.0.5
+```
+
+**Example fsh to create a CapabilityStatement instance**
 
 ```
 Instance: ExampleCapabilityStatement
