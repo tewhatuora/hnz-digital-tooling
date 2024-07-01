@@ -4,7 +4,7 @@
   <h3 align="center">Health New Zealand | Te Whatu Ora HL7 FHIR Digital Tooling Implementation Guide</h3>
 
   <p align="center">
-    <a href="https://fhir-ig-uat.digital.health.nz/hnz-digital-tooling">View Implementation Guide</a>
+    <a href="https://fhir-ig.digital.health.nz/hnz-digital-tooling">View Implementation Guide</a>
   </p>
 </div>
 
