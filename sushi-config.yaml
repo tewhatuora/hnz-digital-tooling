@@ -3,8 +3,8 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: tewhatuora.digitaltooling.iguat
-canonical: https://fhir-ig-uat.digital.health.nz/hnz-digital-tooling
+id: tewhatuora.digitaltooling
+canonical: https://fhir-ig.digital.health.nz/hnz-digital-tooling
 name: Health New Zealand Te Whatu Ora Digital Tooling Implementation Guide
 title: Digital Tooling Implementation Guide
 description: FHIR profiles used in FHIR Publishing processes within Health New Zealand Te Whatu Ora
