@@ -77,7 +77,6 @@ parameters:
 menu:
   Home: index.html
   OpenAPI Converter: OpenAPI-Converter.html
-  OpenAPI Demo: OpenAPI-Demo.html
   History: history.html
   Artifacts: artifacts.html
   Support:

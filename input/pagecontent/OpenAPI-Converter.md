@@ -56,47 +56,27 @@ Example FSH to OpenAPI Path mapping containing all REST operations:
 
 ### OpenAPI Schemas
 
-For each FHIR resource defined, the below behaviour is defined for each case
+For each FHIR resource defined, the below use cases will determine which OpenAPI schemas are generated when using this tool.
 
-Case 1: no `profile` or `supportedProfile` defined:
+Use Case 1: no `profile` or `supportedProfile` defined:
 
 ```fsh
 * rest.resource[+].type = #Patient
 * rest.resource[=].interaction[+].code = #read
 ```
 
-An OpenAPI schema will be generated using the R4 Patient schema.
+An OpenAPI schema will be generated using the R4 Patient schema. This should be used if your API only supports the base fhir resource with no particular profiles.
 
-Case 2: `supportedProfile` defined
+Case 2: `supportedProfile` or `profile` defined
 
 ```fsh
 * rest.resource[+].type = #Patient
+* rest.resource[=].profile = Canonical(Patient)
 * rest.resource[=].supportedProfile[+] = Canonical(ExamplePatientProfile)
 * rest.resource[=].interaction[+].code = #read
 ```
 
-An OpenAPI schema will be generated for the R4 Patient schema, AND a custom schema for the `ExamplePatientProfile`. This is annotated using `anyOf`. Multiple `supportedProfile` are supported.
-
-Case 3: `profile` defined
-
-```fsh
-* rest.resource[+].type = #Patient
-* rest.resource[=].profile = Canonical(ExamplePatientProfile)
-* rest.resource[=].interaction[+].code = #read
-```
-
-An OpenAPI schema will be generated for the `ExamplePatientProfile`. The base R4 Patient resource schema will not be generated.
-
-Case 4: `profile` and `supportedProfile` defined
-
-```fsh
-* rest.resource[+].type = #Patient
-* rest.resource[=].profile = Canonical(ExamplePatientProfile)
-* rest.resource[=].supportedProfile = Canonical(ExamplePatientProfile2)
-* rest.resource[=].interaction[+].code = #read
-```
-
-An OpenAPI schema will be generated for the `ExamplePatientProfile` and `ExamplePatientProfile2`. This is annotated using `anyOf`.
+If `supportedProfile` or `profile` are defined, schemas will be generated for each of those profiles defined. If it is desired to generate a base for the base profile, the base FHIR canonical URL for the resource should be used, e.g. `Canonical(Patient)`. If the base fhir profile is not supported, this should not be present for either `profile` or any `supportedProfiles`.
 
 Once the schemas are generated, they are annotated in the OpenAPI operations based on the operation type, for example GET requests will have the schemas annotated in responses, and requests with a requestBody will have the schemas associated.
 
