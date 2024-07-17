@@ -16,9 +16,12 @@ Usage: #definition
 * description = "FHIR API for Patients"
 * rest.mode = #server
 
-* contact.name = "Example Contact Details"
-* contact.telecom.value = "https://example.com"
-* contact.telecom.system = #url
+* contact[+].name = "Example Contact Details"
+* contact[=].telecom.value = "https://example.com"
+* contact[=].telecom.system = #url
+* contact[+].name = "Email"
+* contact[=].telecom.value = "test@example.com"
+* contact[=].telecom.system = #email
 
 * extension[HnzApiSpecBuilderExtension].extension[globalHeaders].extension[+].url = Canonical(HnzCustomHeadersExtension)
 * extension[HnzApiSpecBuilderExtension].extension[globalHeaders].extension[=].extension[key].valueString = "Correlation-Id"

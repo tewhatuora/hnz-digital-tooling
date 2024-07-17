@@ -4,12 +4,14 @@ Id: hnz-capability-statement
 Title: "Capability Statement profile for use with the Health New Zealand Te Whatu Ora OpenAPI spec converter"
 Description: "A CapabilityStatement profile that constrains and documents the Capability Statement to the Health New Zealand Te Whatu Ora OpenAPI spec converter requirements"
 
-* contact 1..1
-* contact.name 1..1
-* contact.name ^short = "The name of the contact"
-* contact.telecom.system = #url
-* contact.name ^short = "The url for the contact"
-* contact ^short = "The contact details used in the OpenAPI info section"
+* contact 1..
+* contact ^slicing.discriminator.type = #pattern
+* contact ^slicing.discriminator.path = "telecom.system"
+* contact ^slicing.rules = #open
+* contact ^slicing.description = "Must be at least one url contact"
+* contact contains urlContact 1..* MS
+* contact[urlContact].telecom.system = #url
+* contact[urlContact].telecom.value 1..1
 
 * version 1..1
 * version ^short = "The version of API, displayed in the OpenAPI contact section"
