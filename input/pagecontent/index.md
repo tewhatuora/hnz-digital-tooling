@@ -6,5 +6,5 @@ To use these profiles, a dependency should be added to the source Implementation
 
 ```yaml
 dependencies:
-  tewhatuora.digitaltooling: 0.0.6 (Use latest version in the package registry https://simplifier.net/packages/tewhatuora.digitaltooling)
+  tewhatuora.digitaltooling: 0.0.8 (Use latest version in the package registry https://packages2.fhir.org/packages/tewhatuora.digitaltooling)
 ```
