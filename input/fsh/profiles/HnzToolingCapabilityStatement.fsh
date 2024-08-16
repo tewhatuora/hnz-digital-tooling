@@ -13,6 +13,10 @@ Description: "A CapabilityStatement profile that constrains and documents the Ca
 * contact[urlContact].telecom.system = #url
 * contact[urlContact].telecom.value 1..1
 
+* implementation 1..1
+* implementation.url 1..1
+* implementation.url ^short = "The URL of the server that the OpenAPI spec will be generated for. Used in example searchset fullUrls"
+
 * version 1..1
 * version ^short = "The version of API, displayed in the OpenAPI contact section"
 
