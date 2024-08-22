@@ -5,13 +5,7 @@ Title: "Capability Statement profile for use with the Health New Zealand Te What
 Description: "A CapabilityStatement profile that constrains and documents the Capability Statement to the Health New Zealand Te Whatu Ora OpenAPI spec converter requirements"
 
 * contact 1..
-* contact ^slicing.discriminator.type = #pattern
-* contact ^slicing.discriminator.path = "telecom.system"
-* contact ^slicing.rules = #open
-* contact ^slicing.description = "Must be at least one url contact"
-* contact contains urlContact 1..* MS
-* contact[urlContact].telecom.system = #url
-* contact[urlContact].telecom.value 1..1
+* obeys contact-url-invariant
 
 * implementation 1..1
 * implementation.url 1..1
