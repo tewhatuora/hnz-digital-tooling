@@ -15,7 +15,7 @@ To use the OpenAPI Converter tool, a `CapabilityStatement` that is an `InstanceO
 
 ```yaml
 dependencies:
-  tewhatuora.digitaltooling: 0.0.8 (Use latest version in the package registry https://packages2.fhir.org/packages/tewhatuora.digitaltooling)
+  tewhatuora.digitaltooling: 0.0.11 (Use latest version in the package registry https://packages2.fhir.org/packages/tewhatuora.digitaltooling)
 ```
 
 **Example fsh to create a CapabilityStatement instance**
