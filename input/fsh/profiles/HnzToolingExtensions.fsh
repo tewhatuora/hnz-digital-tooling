@@ -29,10 +29,14 @@ Description: "An extension to represent custom headers to be applied globally in
 * extension contains
     key 1..1 and
     value 1..1 and
+    documentation 0..1 and
     required 1..1
 
 * extension[key].value[x] only string
 * extension[key] ^short = "The header name. E.g. Request-Context"
+
+* extension[documentation].value[x] only string
+* extension[documentation] ^short = "Commonmark documentation for the header."
 
 * extension[value].value[x] only uri
 * extension[value] ^short = "The uri to an OAS schema to apply for the header value"
