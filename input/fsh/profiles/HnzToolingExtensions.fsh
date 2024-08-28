@@ -36,10 +36,10 @@ Description: "An extension to represent custom headers to be applied globally in
 * extension[key] ^short = "The header name. E.g. Request-Context"
 
 * extension[documentation].value[x] only string
-* extension[documentation] ^short = "Commonmark documentation for the header."
+* extension[documentation] ^short = "CommonMark documentation for the header."
 
 * extension[value].value[x] only uri
-* extension[value] ^short = "The uri to an OAS schema to apply for the header value"
+* extension[value] ^short = "The uri to an OAS definition for the header. E.g. https://raw.githubusercontent.com/tewhatuora/schemas/main/openapi-definitions/Request-Context.json"
 
 * extension[required].value[x] only boolean
 * extension[required] ^short = "Whether the header is required or optional."
